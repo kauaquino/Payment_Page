@@ -6,47 +6,68 @@ html, body {
 }
 
 body{
-    background: linear-gradient(270deg, #4355bb, #b11dd2);
+    background-image: url('./background.gif');
+    background-repeat: repeat;
+    background-size: 40%;
 
-    -webkit-animation: background 8s ease infinite;
-    -moz-animation: background 8s ease infinite;
-    -o-animation: background 8s ease infinite;
-    animation: background 8s ease infinite;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
 
-@-webkit-keyframes background {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+.title{
+    font-family: 'Signika' !important;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: white;
+    text-shadow: 0px 0px 4px black;
 }
-@-moz-keyframes background {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+
+.btn-cvv{
+    font-family: 'Signika' !important;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-top: 3rem;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+
+    border-radius: 4rem;
+    padding: 25px;  
+    border: 5px solid #FFE81F;
+    transition: 2s;
+    cursor: pointer;
 }
-@-o-keyframes background {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes background {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+
+.btn-cvv:hover{
+    transition: 2s;
+    border: 5px solid #915f02;
 }
 
 .card{
     font-family: 'Signika' !important;
     width: 30%;
     height: 35%;
+    min-height: 240px;
     border-radius: 4rem;
     padding: 25px;  
-    border: 5px solid #FFB200;
+    border: 5px solid #FFE81F;
     display: flex;
     flex-flow: column;
+}
+
+.form-cvv{
+    display: flex;
+    flex-direction: column;
+}
+
+.targetBack{
+    background-color: white;
+    width: 100%;
+    border-radius: 0.5rem;
+    height: 40px;
+    margin-bottom: 30px;
 }
 
 .card h1{
@@ -89,6 +110,11 @@ body{
     display: grid;
 }
 
+.input-card input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+
 .input-card label{
     color: white;
     margin-bottom: 10px;
@@ -102,7 +128,22 @@ body{
     border: none;
     user-select: none;
     color: white;
-    border-bottom: 1px solid;
+}
+.form-cvv p{
+    margin-bottom: 4rem;
+    color: white;
+}
+
+.cvvCard{
+    align-self: end;
+}
+
+.cvvCard label{
+    justify-self: end;
+}
+
+.cvvCard input{
+    text-align: end;
 }
 
 .input-card input:focus{
@@ -110,7 +151,6 @@ body{
     border: none;
     user-select: none;
     outline: none;
-    border-bottom: 1px solid;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -122,3 +162,6 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.title{
+
+}
